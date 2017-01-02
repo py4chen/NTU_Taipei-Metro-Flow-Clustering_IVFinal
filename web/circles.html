@@ -113,16 +113,16 @@
 
 
 <section id="top_title">
-    <h1 class="title">Taipei MRT Stations Clustering</h1>
+    <h1 class="title"> 台北捷運站分群 Taipei MRT Stations Clustering</h1>
     <div id="map"> </div>
         <div class="circle" id="c1"></div>
-        <label> 商業區 </label>
+        <label> 工作區(Working Area) </label>
         <div class="circle" id="c2"></div>
-        <label> 住宅區 </label>
+        <label> 娛樂區(Leisure Time Area) </label>
         <div class="circle" id="c3"></div>
-        <label> 娛樂區 </label>
+        <label> 住宅區(Residential Area) </label>
         <div class="circle" id="c4"></div>
-        <label> 混合區 </label>
+        <label> 混合區 (Mixed Area) </label>
     <div>
         <div class='cc' id="linechart_hour"> </div>
         <div class='cc' id="linechart_date"> </div>
@@ -131,7 +131,7 @@
 
 
 <section id="s2">
-    <h2 class="title"> 3D scatter plot </h2>
+    <h2 class="title"> 三維散點圖 3D scatter plot </h2>
     <div id='ScatterDiv'></div>
 </section>
 
@@ -195,7 +195,7 @@
     // Potly 3D scatter
 
 
-        var names = ['商業區', '娛樂區', '住宅區', '混合區'];
+        var names = ['工作區(Working Area)', '娛樂區(Leisure Time Area)', '住宅區(Residential Area)', '混合區 (Mixed Area)'];
 
         var traces = [];
         for (i = 0; i < 4; i++) {
@@ -212,9 +212,9 @@
                     width: 1
                 },
                 textposition: 'top center',
-                textfont: {
-                    family:  'Raleway, sans-serif'
-                },
+//                textfont: {
+//                    family:  'Raleway, sans-serif'
+//                },
                 marker: { size: 4 }
             });
         }
@@ -258,7 +258,7 @@
         };
         var data = [trace1, trace2];
         var layout = {
-          title: station + ' - 分日平均流量',
+          title: station + ' - 分日平均流量(Day Average Flow)',
           xaxis: {
             title: 'Day Of Week',
             titlefont: {
@@ -298,7 +298,7 @@
         };
         var data2 = [trace1_2, trace2_2];
         var layout2 = {
-          title: station + ' - 分時平均流量',
+          title: station + ' - 分時平均流量(Hour Average Flow)',
           xaxis: {
             title: 'Hour Of Day',
             titlefont: {
